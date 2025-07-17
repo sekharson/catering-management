@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Catering Management</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #d73550;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #d73550;
+      color: white;
+      border-radius: 4px;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background-color: #d73550;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #b42c42;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #d73550;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    h2 {
+      color: #d73550;
+    }
+
+    .logout {
+      margin-top: 20px;
+    }
+
+    .logout button {
+      background-color: #d73550;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .logout button:hover {
+      background-color: #b12e40;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .testimonials {
+      background-color: #fef2f2;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 20px auto;
+      max-width: 600px;
+      color: #444;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 15px;
+      color: #555;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to TasteBuds Catering</h1>
+    <p>Your One-Stop Solution for Delicious Events</p>
+    
+
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  
+  
+    <div class="logout" id="logout-section" style="display: none;">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>Delight in Every Bite</h1>
+      <p>From weddings to corporate events – we cater to every occasion.</p>
+      <a class="btn" href="customer-login.html">Get Started</a>
+    </div>
+  </div>
+  <div class="container">
+    <h2 id="welcome-message">Welcome to our Catering Service!</h2>
+
+    <p>We bring delicious food to your events, parties, and celebrations!</p>
+
+
+  <div class="section">
+    <h2>About Us</h2>
+    <p>We are a leading catering company in India providing premium food & service at events of all scales. Whether you need elegant cuisine for a wedding or a corporate buffet, TasteBuds delivers quality, taste, and satisfaction.</p>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3132/3132084.png" alt="Quality Food">
+        <h3>Quality Food</h3>
+        <p>We use fresh ingredients and skilled chefs to deliver rich and hygienic meals.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3750/3750805.png" alt="On Time">
+        <h3>On-Time Delivery</h3>
+        <p>We ensure timely delivery for your events so you don’t stress on the big day.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png" alt="Custom Menu">
+        <h3>Custom Menus</h3>
+        <p>Tailor your event’s menu with our vast range of vegetarian and non-vegetarian dishes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Wedding Catering</h3>
+        <p>Make your big day deliciously memorable with our traditional & modern cuisines.</p>
+      </div>
+      <div class="card">
+        <h3>Corporate Events</h3>
+        <p>Lunches, seminars, launches – we handle it all professionally and tastefully.</p>
+      </div>
+      <div class="card">
+        <h3>Party Orders</h3>
+        <p>Birthdays, family functions, anniversaries – great food, great memories.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section testimonials">
+    <h2>What Our Clients Say</h2>
+    <blockquote>
+      “TasteBuds made our wedding unforgettable with their amazing food and professional service.” – <strong>Ravi & Anu</strong>
+    </blockquote>
+    <blockquote>
+      “We hired them for a corporate meet. Everything was timely and the menu was perfect.” – <strong>Sony Pvt Ltd</strong>
+    </blockquote>
+  </div>
+
+  <div class="section">
+    <h2>Ready to Book Your Event?</h2>
+    <p>Let us take care of the food while you enjoy your day. Sign up or contact us now to plan your catering.</p>
+    <a class="btn" href="customer-register.html">Register Now</a>
+  </div>
+
+  <footer>
+    © 2025 TasteBuds Catering. All rights reserved. | Designed by Dhanush
+  </footer>
+  
+
+
+
+<script>
+    const username = localStorage.getItem("username");
+
+    if (username) {
+      document.getElementById("welcome-message").textContent = `Welcome, ${username}!`;
+      document.getElementById("logout-section").style.display = "block";
+    }
+
+    function logout() {
+      localStorage.removeItem("username");
+      alert("You have been logged out.");
+      window.location.href = "customer-login.html";
+    }
+  </script>
+</body>
+</html>

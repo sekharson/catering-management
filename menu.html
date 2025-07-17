@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Combos - Catering</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #d73550;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #d73550;
+      color: white;
+      border-radius: 4px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .combo-card {
+      background: white;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .combo-card:hover {
+      transform: scale(1.03);
+    }
+
+    .combo-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .combo-details {
+      padding: 15px;
+    }
+
+    .combo-details h3 {
+      margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .veg {
+      color: green;
+      font-size: 14px;
+      border: 1px solid green;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .non-veg {
+      color: red;
+      font-size: 14px;
+      border: 1px solid red;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #d73550;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    button {
+      background-color: #7aca8d; /* green for cart */
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+}
+  
+
+button:hover {
+  background-color: #218838;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Food Combos</h1>
+    <p>Perfectly curated combo meals for all occasions</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Combo 1 -->
+    <div class="combo-card">
+      <div class="combo-details">
+        <h3>Veg Delight Combo <span class="veg">VEG</span></h3>
+        <ul>
+          <li>Paneer Butter Masala</li>
+          <li>Dal Tadka</li>
+          <li>Jeera Rice</li>
+          <li>Butter Naan</li>
+          <li>Gulab Jamun</li>
+        </ul>
+        <p class="price">₹299</p>
+        <button onclick="addToCart('Veg Delight Combo', 299)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Combo 2 -->
+    <div class="combo-card">
+      <div class="combo-details">
+        <h3>Non-Veg Treat Combo <span class="non-veg">NON-VEG</span></h3>
+        <ul>
+          <li>Butter Chicken</li>
+          <li>Chicken Biryani</li>
+          <li>Garlic Naan</li>
+          <li>Raita</li>
+          <li>Rasgulla</li>
+        </ul>
+        <p class="price">₹349</p>
+        <button onclick="addToCart('Non-Veg Treat Combo', 349)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Combo 3 -->
+    <div class="combo-card">
+      <div class="combo-details">
+        <h3>South Indian Combo <span class="veg">VEG</span></h3>
+        <ul>
+          <li>Idli & Sambar</li>
+          <li>Masala Dosa</li>
+          <li>Vada</li>
+          <li>Chutney</li>
+          <li>Filter Coffee</li>
+        </ul>
+        <p class="price">₹199</p>
+        <button onclick="addToCart('South Indian Combo', 199)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Combo 4 -->
+    <div class="combo-card">
+      <div class="combo-details">
+        <h3>North Indian Feast <span class="veg">VEG</span></h3>
+        <ul>
+          <li>Chole Bhature</li>
+          <li>Shahi Paneer</li>
+          <li>Pulao</li>
+          <li>Roti</li>
+          <li>Kheer</li>
+        </ul>
+        <p class="price">₹279</p>
+        <button onclick="addToCart('North Indian Feast', 279)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Combo 5 -->
+    <div class="combo-card">
+      <div class="combo-details">
+        <h3>Kids Combo <span class="veg">VEG</span></h3>
+        <ul>
+          <li>Mini Burger</li>
+          <li>Fries</li>
+          <li>Pizza Slice</li>
+          <li>Juice</li>
+          <li>Ice Cream</li>
+        </ul>
+        <p class="price">₹199</p>
+        <button onclick="addToCart('Kids Combo', 199)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Combo 6 -->
+    <div class="combo-card">
+      <div class="combo-details">
+        <h3>Biryani Combo <span class="non-veg">NON-VEG</span></h3>
+        <ul>
+          <li>Mutton Biryani</li>
+          <li>Boiled Egg</li>
+          <li>Onion Raita</li>
+          <li>Sweet</li>
+          <li>Soft Drink</li>
+        </ul>
+        <p class="price">₹399</p>
+        <button onclick="addToCart('Biryani Combo', 399)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Combo 7 -->
+<div class="combo-card">
+  <div class="combo-details">
+    <h3>Royal Veg Thali <span class="veg">VEG</span></h3>
+    <ul>
+      <li>Palak Paneer</li>
+      <li>Mixed Veg</li>
+      <li>Dal Fry</li>
+      <li>Rice, Naan, Salad</li>
+      <li>Gulab Jamun</li>
+    </ul>
+    <p class="price">₹349</p>
+    <button onclick="addToCart('Royal Veg Thali', 349)">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Combo 8 -->
+<div class="combo-card">
+  <div class="combo-details">
+    <h3>Protein Power Combo <span class="non-veg">NON-VEG</span></h3>
+    <ul>
+      <li>Grilled Chicken</li>
+      <li>Boiled Eggs</li>
+      <li>Steamed Veggies</li>
+      <li>Brown Rice</li>
+      <li>Lemon Water</li>
+    </ul>
+    <p class="price">₹399</p>
+    <button onclick="addToCart('Protein Power Combo', 399)">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Combo 9 -->
+<div class="combo-card">
+  <div class="combo-details">
+    <h3>Tandoori Platter <span class="non-veg">NON-VEG</span></h3>
+    <ul>
+      <li>Chicken Tikka</li>
+      <li>Seekh Kabab</li>
+      <li>Paneer Tikka</li>
+      <li>Mint Chutney</li>
+      <li>Butter Naan</li>
+    </ul>
+    <p class="price">₹459</p>
+    <button onclick="addToCart('Tandoori Platter', 459)">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Combo 10 -->
+<div class="combo-card">
+  <div class="combo-details">
+    <h3>Fusion Wrap Combo <span class="veg">VEG</span></h3>
+    <ul>
+      <li>Paneer Wrap</li>
+      <li>Curly Fries</li>
+      <li>Sweet Corn Salad</li>
+      <li>Mojito</li>
+      <li>Brownie</li>
+    </ul>
+    <p class="price">₹279</p>
+    <button onclick="addToCart('Fusion Wrap Combo', 279)">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Combo 11 -->
+<div class="combo-card">
+  <div class="combo-details">
+    <h3>Continental Combo <span class="non-veg">NON-VEG</span></h3>
+    <ul>
+      <li>Grilled Fish Fillet</li>
+      <li>Mashed Potatoes</li>
+      <li>Buttered Veggies</li>
+      <li>Garlic Bread</li>
+      <li>Lemonade</li>
+    </ul>
+    <p class="price">₹479</p>
+    <button onclick="addToCart('Continental Combo', 479)">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Combo 12 -->
+<div class="combo-card">
+  <div class="combo-details">
+    <h3>Italian Delight Combo <span class="veg">VEG</span></h3>
+    <ul>
+      <li>Red Sauce Pasta</li>
+      <li>Garlic Bread</li>
+      <li>Caesar Salad</li>
+      <li>Coke</li>
+      <li>Choco Lava Cake</li>
+    </ul>
+    <p class="price">₹329</p>
+    <button onclick="addToCart('Italian Delight Combo', 329)">Add to Cart</button>
+  </div>
+</div>
+
+
+  </div>
+
+  <footer>
+    &copy; 2025 Catering Services | All Rights Reserved
+  </footer>
+ <script>
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    // Check if item exists in cart
+    let existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ name, price, quantity: 1 });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart!");
+  }
+</script>
+
+
+
+</body>
+</html>
